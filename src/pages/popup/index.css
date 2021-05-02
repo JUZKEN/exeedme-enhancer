@@ -1,8 +1,8 @@
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  min-width: 200px;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  min-width: 270px;
   padding: 0.3rem 2rem 1rem;
   background-color: #171a1f;
   color: #fff;
@@ -18,7 +18,7 @@ body {
 }
 
 button {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +46,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .switch {
@@ -74,7 +75,7 @@ button:hover {
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 21px;
   width: 21px;
   left: 4px;
@@ -103,4 +104,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
