@@ -1,0 +1,22 @@
+.enhancer-stats {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 8px;
+  color: #afbbc9;
+}
+.enhancer-stats .faceit-lvl {
+  display: flex;
+}
+.enhancer-stats .faceit-lvl p {
+  padding: 0 5px;
+}
+.css-v1oagj + .enhancer-stats {
+  justify-content: flex-end;
+}
+.css-v1oagj + .enhancer-stats .faceit-lvl {
+  flex-direction: row-reverse;
+}
+.enhancer-stats img {
+  width: 25px;
+}

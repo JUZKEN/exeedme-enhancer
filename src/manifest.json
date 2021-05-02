@@ -20,15 +20,30 @@
       ],
       "js": [
         "contentScript.bundle.js"
+      ],
+      "css": [
+        "content.css"
       ]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": [
-        "icon-128.png"
+        "icon-128.png",
+        "lvl-1.png",
+        "lvl-2.png",
+        "lvl-3.png",
+        "lvl-4.png",
+        "lvl-5.png",
+        "lvl-6.png",
+        "lvl-7.png",
+        "lvl-8.png",
+        "lvl-9.png",
+        "lvl-10.png"
       ],
-      "matches": []
+      "matches": [
+        "*://*.exeedme.com/*"
+      ]
     }
   ],
   "permissions": [

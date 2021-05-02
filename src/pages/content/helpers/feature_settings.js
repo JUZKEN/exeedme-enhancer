@@ -7,5 +7,5 @@ export const isFeatureEnabled = async option => {
 
 export const runIfFeatureEnabled = async (option, feature, parent) => {
    const featureEnabled = await isFeatureEnabled(option)
-   if (featureEnabled) feature(parent);
+   if (featureEnabled) feature(parent ?? null);
 }

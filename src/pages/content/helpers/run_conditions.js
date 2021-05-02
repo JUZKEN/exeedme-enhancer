@@ -9,3 +9,8 @@ export const isMatchReady = element => {
    }
    return false;
 }
+
+export const isMatchRoomOverview = () => {
+   const isMatchRoomOverview = select.exists(".css-11o85u9");
+   return isMatchRoomOverview;
+}

@@ -54,6 +54,13 @@ export default class Popup extends React.Component {
               <span className="slider round"></span>
             </label>
           </div>
+          <div className="option">
+            <h3>Show Player Stats</h3>
+            <label className="switch">
+              <input type="checkbox" name="showplayerstats" id="showplayerstats-switch" onClick={this.handleSwitchOption("showPlayerStatsEnabled")} defaultChecked={this.state.options["showPlayerStatsEnabled"]} />
+              <span className="slider round"></span>
+            </label>
+          </div>
         </div>
       </div>
     );

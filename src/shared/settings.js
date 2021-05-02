@@ -1,3 +1,4 @@
 export const DEFAULTS = {
-   autoAccept: true
+   autoAccept: true,
+   showPlayerStatsEnabled: true,
 }
