@@ -3,7 +3,6 @@ import { runIfFeatureEnabled } from './helpers/feature_settings';
 import clickAcceptButton from './features/click-accept-button';
 import showPlayerStats from './features/show-player-stats';
 import * as run_conditions from './helpers/run_conditions';
-import { getUserStats } from './helpers/api-faceit';
 
 console.log('Content script injected!');
 
@@ -34,8 +33,5 @@ function observe() {
 }
 
 (async () => {
-
-   
-
    observe();
 })()
