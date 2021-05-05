@@ -8,17 +8,13 @@ import { getUserStats } from './helpers/api-faceit';
 console.log('Content script injected!');
 
 function observe() {
-   const pathName = window.location.pathname;
-   const firstUrlSegment = pathName.split('/')[1];
    const observer = new MutationObserver( (mutations) => {
    
-      if (firstUrlSegment == 'lobbies') {
-         if (run_conditions.isMatchRoomOverview()) {
-            runIfFeatureEnabled(
-               'showPlayerStatsEnabled',
-               showPlayerStats
-            )
-         }
+      if (run_conditions.isMatchRoomOverview()) {
+         runIfFeatureEnabled(
+            'showPlayerStatsEnabled',
+            showPlayerStats
+         )
       }
 
       const modalElement = select('.chakra-modal__content');
