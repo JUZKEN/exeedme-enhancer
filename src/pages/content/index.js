@@ -2,6 +2,7 @@ import select from 'select-dom';
 import { runIfFeatureEnabled } from './helpers/feature_settings';
 import * as run_conditions from './helpers/run_conditions';
 import clickAcceptButton from './features/click-accept-button';
+import clickPlayButton from './features/click-play-button';
 import showPlayerStats from './features/show-player-stats';
 import showPlayerElo from './features/show-player-elo';
 
@@ -18,6 +19,10 @@ function observe() {
          runIfFeatureEnabled(
             'showPlayerStatsEnabled',
             showPlayerElo
+         )
+         runIfFeatureEnabled(
+            'autoJoinServerEnabled',
+            clickPlayButton
          )
       }
 

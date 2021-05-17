@@ -61,6 +61,13 @@ export default class Popup extends React.Component {
               <span className="slider round"></span>
             </label>
           </div>
+          <div className="option">
+            <h3>Auto Join Server</h3>
+            <label className="switch">
+              <input type="checkbox" name="autojoinserver" id="autojoinserver-switch" onClick={this.handleSwitchOption("autoJoinServerEnabled")} defaultChecked={this.state.options["autoJoinServerEnabled"]} />
+              <span className="slider round"></span>
+            </label>
+          </div>
         </div>
       </div>
     );
