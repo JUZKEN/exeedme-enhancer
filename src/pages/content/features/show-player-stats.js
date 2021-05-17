@@ -1,5 +1,5 @@
 import select from 'select-dom';
-import { getUserStats } from '../helpers/api-faceit';
+import { getUserStats, getUserDetailedStats } from '../helpers/api-faceit';
 
 export default parent = () => {
    const playerItems = select.all('.css-rc2id9');
@@ -14,6 +14,7 @@ export default parent = () => {
          const steamUrl = select('.css-1su6yxb', item).href;
          const steamId = steamUrl.substr(steamUrl.lastIndexOf('/') + 1);
          const playerStats = await getUserStats(steamId);
+         const playerDetailedStats = await getUserDetailedStats(steamId);
 
          if (!playerStats || playerStats['games'] == undefined || playerStats['games']['csgo'] == undefined) {
             statsElement.innerHTML = "Faceit account not found";
@@ -22,8 +23,8 @@ export default parent = () => {
          
          const imgUrl = chrome.runtime.getURL(`lvl-${playerStats['games']['csgo']['skill_level_label']}.png`);
          statsElement.innerHTML = `
-         <div class="faceit-lvl"><img src="${imgUrl}"/>
-         <p>${playerStats['games']['csgo']['faceit_elo']}</p></div>
+         <a class="faceit-lvl" href="${playerStats['faceit_url'].replace("{lang}", "en")}" target="_blank"><img src="${imgUrl}" />
+         <p>${playerStats['games']['csgo']['faceit_elo']} Elo | ${playerDetailedStats['lifetime']['Matches']} Matches</p></a>
          `;
       })
    }

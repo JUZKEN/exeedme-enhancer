@@ -6,6 +6,11 @@ export const getUserStats = async (steamId) => {
    return await fetchData(`/players?game_player_id=${steamId}&game=csgo`);
 };
 
+export const getUserDetailedStats = async (steamId) => {
+   let user = await fetchData(`/players?game_player_id=${steamId}&game=csgo`);
+   return await fetchData(`/players/${user['player_id']}/stats/csgo`);
+};
+
 async function fetchData(path) {
    try {
       const options = { headers: {
