@@ -15,7 +15,7 @@ export default parent = () => {
          const steamId = steamUrl.substr(steamUrl.lastIndexOf('/') + 1);
          const playerStats = await getUserStats(steamId);
 
-         if (!playerStats) {
+         if (!playerStats || playerStats['games'] == undefined || playerStats['games']['csgo'] == undefined) {
             statsElement.innerHTML = "Faceit account not found";
             return;
          }

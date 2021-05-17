@@ -1,8 +1,9 @@
 import select from 'select-dom';
 import { runIfFeatureEnabled } from './helpers/feature_settings';
+import * as run_conditions from './helpers/run_conditions';
 import clickAcceptButton from './features/click-accept-button';
 import showPlayerStats from './features/show-player-stats';
-import * as run_conditions from './helpers/run_conditions';
+import showPlayerElo from './features/show-player-elo';
 
 console.log('Content script injected!');
 
@@ -13,6 +14,10 @@ function observe() {
          runIfFeatureEnabled(
             'showPlayerStatsEnabled',
             showPlayerStats
+         )
+         runIfFeatureEnabled(
+            'showPlayerStatsEnabled',
+            showPlayerElo
          )
       }
 

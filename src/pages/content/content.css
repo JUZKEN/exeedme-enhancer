@@ -1,9 +1,16 @@
+.enhancer-elo,
+.enhancer-stats {
+  color: #afbbc9;
+}
+.enhancer-elo {
+  display: flex;
+  align-items: center;
+}
 .enhancer-stats {
   display: flex;
   justify-content: flex-start;
   width: 100%;
   padding: 0 8px;
-  color: #afbbc9;
 }
 .enhancer-stats .faceit-lvl {
   display: flex;
