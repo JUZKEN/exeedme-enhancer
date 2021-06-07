@@ -5,8 +5,9 @@ import clickAcceptButton from './features/click-accept-button';
 import clickPlayButton from './features/click-play-button';
 import showPlayerStats from './features/show-player-stats';
 import showPlayerElo from './features/show-player-elo';
+import showFaceitSocialButton from './features/show-faceit-social-button';
 
-console.log('Content script injected!');
+console.log('Exeedme Enhancer injected!');
 
 function observe() {
    const observer = new MutationObserver( (mutations) => {
@@ -24,6 +25,10 @@ function observe() {
             'autoJoinServerEnabled',
             clickPlayButton
          )
+      }
+
+      if (run_conditions.isProfileOverview()) {
+         showFaceitSocialButton();
       }
 
       const modalElement = select('.chakra-modal__content');

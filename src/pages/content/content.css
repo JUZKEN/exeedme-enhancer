@@ -2,6 +2,9 @@
 .enhancer-stats {
   color: #afbbc9;
 }
+.enhancer-faceit-button img {
+  width: 16px;
+}
 .enhancer-elo {
   display: flex;
   align-items: center;
@@ -18,10 +21,10 @@
 .enhancer-stats .faceit-lvl p {
   padding: 0 5px;
 }
-.css-v1oagj + .enhancer-stats {
+.css-cn4k28 + .enhancer-stats {
   justify-content: flex-end;
 }
-.css-v1oagj + .enhancer-stats .faceit-lvl {
+.css-cn4k28 + .enhancer-stats .faceit-lvl {
   flex-direction: row-reverse;
 }
 .enhancer-stats img {

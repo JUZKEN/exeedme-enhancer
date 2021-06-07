@@ -11,6 +11,11 @@ export const isMatchReady = element => {
 }
 
 export const isMatchRoomOverview = () => {
-   const isMatchRoomOverview = select.exists(".css-11o85u9");
-   return isMatchRoomOverview;
+   let path = window.location.pathname.split('/')[1];
+   return path == 'lobbies' ? true : false;
+}
+
+export const isProfileOverview = () => {
+   let path = window.location.pathname.split('/')[1];
+   return path == 'players' ? true : false;
 }
